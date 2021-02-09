@@ -24,7 +24,7 @@
     <string name="something_wrong">Oops.. something went wrong</string>
 
     // Setting
-    <string name="daily_notif_message">Update Capstone Project is Available! </string>
+    <string name="daily_notif_message">Update version Capstone Project is Available! </string>
     <string name="reminder">Reminder</string>
     <string name="notification_reminder">Daily Reminder</string>
     <string name="notification_disable">Notification Disable</string>
