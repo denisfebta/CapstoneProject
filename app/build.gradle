@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+apply from: '../shared_dependencies.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        applicationId "denis.capstoneproject"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "TMDB_API_KEY", "\"da4faa4ce42de8d5181011198cf7fc65\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+    dynamicFeatures = [':favorite']
+}
+
+dependencies {
+    implementation project(":core")
+
+    // UI
+    implementation "androidx.cardview:cardview:$cardview_version"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+
+    // Preference
+    implementation "androidx.preference:preference-ktx:$preferenceVersion"
+
+    // Koin
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // LeakCanary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanary"
+
+    //SQLite
+    implementation "net.zetetic:android-database-sqlcipher:$SQLChipper"
+    implementation "androidx.sqlite:sqlite-ktx:$SQLite"
+
+    // Shimmer
+    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
+
+}

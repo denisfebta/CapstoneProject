@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Capstone Project</string>
+
+    // Content
+    <string name="content_title">Content Title</string>
+    <string name="content_rating">10.0</string>
+    <string name="release_date">08-17-1945</string>
+
+    // Drawer
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    // Navigation
+    <string name="menu_home">Home</string>
+    <string name="menu_movie">Movie</string>
+    <string name="menu_map">Maps</string>
+    <string name="menu_favorite">Favorite</string>
+    <string name="menu_tv">Tv Show</string>
+    <string name="menu_setting">Setting</string>
+
+    // Detail
+    <string name="title_activity_detail_home">DetailHomeActivity</string>
+    <string name="no_data">Empty data</string>
+    <string name="something_wrong">Oops.. something went wrong</string>
+
+    // Setting
+    <string name="daily_notif_message">Update Capstone Project is Available! </string>
+    <string name="reminder">Reminder</string>
+    <string name="notification_reminder">Daily Reminder</string>
+    <string name="notification_disable">Notification Disable</string>
+    <string name="notification_enable">Notification Enable</string>
+    <string name="text_title">text_title</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_favorite">Favorite</string>
+
+    <string name="power_connected">Power connected!</string>
+    <string name="power_disconnected">Power disconnected!</string>
+
+</resources>
